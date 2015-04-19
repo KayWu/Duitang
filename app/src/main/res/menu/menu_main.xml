@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context=".MainActivity">
+
+
+    <item
+        android:id="@+id/action_search"
+        android:title="搜索"
+        android:icon="@drawable/action_bar_icon_search"
+        android:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/action_add"
+        android:title="发布"
+        android:icon="@drawable/action_bar_icon_add"
+        android:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/action_settings"
+        android:title="设置"
+        android:orderInCategory="100"
+        android:showAsAction="never"/>
+</menu>

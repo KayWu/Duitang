@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="@drawable/card_background"
+    >
+
+    <com.etsy.android.grid.util.DynamicHeightImageView
+        android:id="@+id/stagger_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:ellipsize="end"
+        android:maxLines="6"
+        android:text="小清新 语录 歌词"/>
+
+
+    <Button
+        android:id="@+id/collect_number"
+        android:layout_width="32dp"
+        android:layout_height="16dp"
+        android:drawableLeft="@drawable/ic_star"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="10sp"
+        android:textColor="@color/dark_grey"
+        android:background="@null"
+        android:text="233"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_grey"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+        
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/thumb"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/thumb1"/>
+
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/thumb"
+            android:layout_marginLeft="8dp"
+            android:textSize="13sp"
+            android:textColor="@color/blue"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="用户A"
+            />
+
+        <TextView
+            android:id="@+id/collect_place"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/thumb"
+            android:layout_below="@id/user_name"
+            android:layout_marginLeft="8dp"
+            android:textSize="13sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="收集到 我们一起"
+            />
+
+    </RelativeLayout>
+</LinearLayout>
