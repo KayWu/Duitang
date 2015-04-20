@@ -4,6 +4,7 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.support.v13.app.FragmentStatePagerAdapter;
 
+import com.kay.duitang.ui.DiscoverFragment;
 import com.kay.duitang.ui.PagerFragment;
 import com.kay.duitang.ui.PopularFragment;
 import com.kay.duitang.ui.MoveFragment;
@@ -24,7 +25,8 @@ public class FragmentAdapter extends FragmentStatePagerAdapter {
         switch (position) {
             case 0:
                 return new PopularFragment();
-
+            case 1:
+                return new DiscoverFragment();
             case 2:
                 return new MoveFragment();
             default:

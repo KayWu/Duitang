@@ -30,14 +30,14 @@
 
     <TextView
         android:id="@+id/count_down"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
         android:gravity="center"
-        android:textSize="36sp"
+        android:textSize="32sp"
         android:textColor="#50ffffff"
         android:background="@drawable/count_down_background"
         tools:text="2"

@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.util.Log;
 import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -46,24 +45,18 @@ public class WelcomeActivity extends Activity {
             public void onTick(long millisUntilFinished) {
                 countDown.setText(String.valueOf(num));
                 num--;
-                Log.d("WelcomeActivity", num + "");
             }
 
             @Override
             public void onFinish() {
-
                 Intent i = new Intent(WelcomeActivity.this, MainActivity.class);
                 i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(i);
                 overridePendingTransition(0, 0);
                 finish();
-
             }
         };
-
         timer.start();
-
-
     }
 
 

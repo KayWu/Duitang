@@ -16,6 +16,7 @@ import com.kay.duitang.utils.BitmapUtils;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
@@ -29,9 +30,16 @@ public class StaggerItemAdapter extends BaseAdapter {
 
     private List<StaggerItem> itemList;
     private Context mContext;
+    private boolean isReverse = false;
 
     public StaggerItemAdapter(Context context) {
         mContext = context;
+        initData();
+    }
+
+    public StaggerItemAdapter(Context context, boolean isReverse) {
+        mContext = context;
+        this.isReverse = isReverse;
         initData();
     }
 
@@ -61,6 +69,7 @@ public class StaggerItemAdapter extends BaseAdapter {
             itemList.add(item);
 
         }
+        if (isReverse) Collections.reverse(itemList);
     }
 
     @Override
@@ -96,7 +105,7 @@ public class StaggerItemAdapter extends BaseAdapter {
         vh.collectNum.setText(item.getCollectNum() + "");
         Picasso.with(mContext).load(item.getThumbImage()).into(vh.thumbImage);
         vh.userName.setText(item.getUserName());
-        vh.collectPlace.setText(item.getCollectPlace());
+        vh.collectPlace.setText("收集到 "+item.getCollectPlace());
 
         return convertView;
 

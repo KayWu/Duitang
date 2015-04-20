@@ -32,7 +32,7 @@ public class MoveFragment extends Fragment {
     }
 
     private void initView() {
-        mStaggeredGridView.setAdapter(new StaggerItemAdapter(getActivity()));
+        mStaggeredGridView.setAdapter(new StaggerItemAdapter(getActivity(), true));
     }
 
 
