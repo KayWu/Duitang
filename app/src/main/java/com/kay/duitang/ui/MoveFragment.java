@@ -17,7 +17,7 @@ import butterknife.InjectView;
 /**
  * Created by mac on 15/4/19.
  */
-public class StaggerFragment extends Fragment {
+public class MoveFragment extends Fragment {
 
     @InjectView(R.id.stagger_view)
     StaggeredGridView mStaggeredGridView;

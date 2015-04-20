@@ -5,24 +5,6 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <android.support.v4.view.ViewPager
-            android:id="@+id/image_pager"
-            android:layout_width="match_parent"
-            android:layout_height="210dp"
-            />
-
-        <com.viewpagerindicator.CirclePageIndicator
-            android:id="@+id/image_indicator"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal|bottom"
-            android:layout_marginBottom="8dp"/>
-
-    </FrameLayout>
 
     <com.etsy.android.grid.StaggeredGridView
         android:id="@+id/stagger_view"

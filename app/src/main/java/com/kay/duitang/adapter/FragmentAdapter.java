@@ -6,7 +6,7 @@ import android.support.v13.app.FragmentStatePagerAdapter;
 
 import com.kay.duitang.ui.PagerFragment;
 import com.kay.duitang.ui.PopularFragment;
-import com.kay.duitang.ui.StaggerFragment;
+import com.kay.duitang.ui.MoveFragment;
 
 /**
  * Created by mac on 15/4/11.
@@ -26,7 +26,7 @@ public class FragmentAdapter extends FragmentStatePagerAdapter {
                 return new PopularFragment();
 
             case 2:
-                return new StaggerFragment();
+                return new MoveFragment();
             default:
                 return PagerFragment.newInstance(position + "");
         }
