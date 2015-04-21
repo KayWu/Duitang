@@ -49,7 +49,6 @@
     </style>
 
     <style name="Category">
-
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">156dp</item>
         <item name="android:layout_weight">1</item>
@@ -57,5 +56,17 @@
         <item name="android:paddingTop">24dp</item>
         <item name="android:paddingBottom">24dp</item>
         <item name="android:weightSum">3</item>
+    </style>
+
+    <style name="DiscoverButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:background">@null</item>
+        <item name="android:textColor">@color/white</item>
     </style>
 </resources>

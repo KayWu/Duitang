@@ -7,10 +7,61 @@
     >
 
     <LinearLayout
-                  android:orientation="vertical"
-                  android:layout_width="match_parent"
-                  android:layout_height="match_parent">
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="136dp"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:background="@drawable/discover_view_background">
+
+            <Button
+                android:drawableTop="@drawable/icon_album"
+                android:text="达人"
+                style="@style/DiscoverButton"/>
+
+            <Button
+                android:drawableTop="@drawable/icon_collection"
+                android:text="Club"
+                style="@style/DiscoverButton"/>
+
+            <Button
+                android:drawableTop="@drawable/icon_notification"
+                android:text="活动"
+                style="@style/DiscoverButton"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textColor="@color/dark_grey"
+            android:padding="8dp"
+            android:background="@color/white"
+            android:text="流行趋势"/>
+
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@color/white"
+            android:scrollbars="none"
+            >
+
+            <LinearLayout
+                android:id="@+id/scroll_layout"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+            </LinearLayout>
+        </HorizontalScrollView>
 
         <include layout="@layout/category_layout"/>
     </LinearLayout>

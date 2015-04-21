@@ -5,7 +5,7 @@ package com.kay.duitang.bean;
  */
 public class StaggerItem {
     private int imageSource;
-    private String destription;
+    private String description;
     private int collectNum;
     private int thumbImage;
     private String userName;
@@ -16,7 +16,7 @@ public class StaggerItem {
 
     public StaggerItem(int imageSource, String destription, int collectNum, int thumbImage, String userName, String collectPlace) {
         this.imageSource = imageSource;
-        this.destription = destription;
+        this.description = destription;
         this.collectNum = collectNum;
         this.thumbImage = thumbImage;
         this.userName = userName;
@@ -32,11 +32,11 @@ public class StaggerItem {
     }
 
     public String getDestription() {
-        return destription;
+        return description;
     }
 
     public void setDestription(String destription) {
-        this.destription = destription;
+        this.description = destription;
     }
 
     public int getCollectNum() {
