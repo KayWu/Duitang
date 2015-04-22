@@ -45,22 +45,18 @@
             android:background="@color/white"
             android:text="流行趋势"/>
 
-
         <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:background="@color/white"
             android:scrollbars="none"
             >
-
-            <LinearLayout
-                android:id="@+id/scroll_layout"
-                android:orientation="horizontal"
+            <com.kay.duitang.ui.HorizontalTrendView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                >
+                android:background="@drawable/card_background">
 
-            </LinearLayout>
+            </com.kay.duitang.ui.HorizontalTrendView>
         </HorizontalScrollView>
 
         <include layout="@layout/category_layout"/>

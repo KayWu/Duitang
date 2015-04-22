@@ -9,19 +9,15 @@ import android.view.ViewGroup;
 
 import com.kay.duitang.R;
 
-import butterknife.ButterKnife;
-
 /**
- * Created by mac on 15/4/20.
+ * Created by mac on 15/4/23.
  */
-public class DiscoverFragment extends Fragment {
+public class MsgFragment extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_discover, container, false);
-        ButterKnife.inject(this, view);
+        View view = inflater.inflate(R.layout.fragment_msg, container, false);
         return view;
     }
-
 }

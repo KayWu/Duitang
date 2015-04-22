@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_background"
+        android:layout_margin="16dp">
+
+
+        <TableRow>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_margin="12dp"
+                android:src="@drawable/activity_icon_1"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="通知"
+                android:textSize="16sp"
+                android:gravity="center_vertical"/>
+
+        </TableRow>
+
+        <View
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            style="@style/HorizontalDivider"/>
+
+        <TableRow>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_margin="12dp"
+                android:src="@drawable/activity_icon_2"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="赞/评论"
+                android:textSize="16sp"
+                android:gravity="center_vertical"/>
+        </TableRow>
+
+        <View
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            style="@style/HorizontalDivider"/>
+
+        <TableRow>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_margin="12dp"
+                android:src="@drawable/activity_icon_3"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="好友"
+                android:textSize="16sp"
+                android:gravity="center_vertical"/>
+        </TableRow>
+
+        <View
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            style="@style/HorizontalDivider"/>
+    </TableLayout>
+</LinearLayout>

@@ -9,15 +9,14 @@
     >
 
     <ImageView
-        android:id="@+id/gallery_img"
+        android:id="@+id/trend_img"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/gallery0"
+        tools:src="@drawable/gallery0"
         />
 
     <TextView
-        android:id="@+id/gallery_tv"
+        android:id="@+id/trend_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="13sp"
@@ -25,7 +24,7 @@
         android:layout_marginBottom="4dp"
         android:ellipsize="end"
         android:maxLines="1"
-        android:text="权利的游戏"
+        tools:text="权利的游戏"
         />
 
 </LinearLayout>

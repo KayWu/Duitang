@@ -3,7 +3,7 @@ package com.kay.duitang.bean;
 /**
  * Created by mac on 15/4/21.
  */
-public class GalleryItem {
+public class TrendItem {
     private int imageSource;
     private String description;
 

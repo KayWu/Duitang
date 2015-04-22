@@ -5,6 +5,7 @@ import android.app.FragmentManager;
 import android.support.v13.app.FragmentStatePagerAdapter;
 
 import com.kay.duitang.ui.DiscoverFragment;
+import com.kay.duitang.ui.MsgFragment;
 import com.kay.duitang.ui.PagerFragment;
 import com.kay.duitang.ui.PopularFragment;
 import com.kay.duitang.ui.MoveFragment;
@@ -29,6 +30,8 @@ public class FragmentAdapter extends FragmentStatePagerAdapter {
                 return new DiscoverFragment();
             case 2:
                 return new MoveFragment();
+            case 3:
+                return new MsgFragment();
             default:
                 return PagerFragment.newInstance(position + "");
         }
