@@ -16,7 +16,7 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 
 /**
- * Created by mac on 15/4/20.
+ * Created by Kay on 15/4/20.
  */
 public class WelcomeActivity extends Activity {
     @InjectView(R.id.welecome_image)

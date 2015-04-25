@@ -4,7 +4,7 @@ import android.content.Context;
 import android.graphics.BitmapFactory;
 
 /**
- * Created by mac on 15/4/19.
+ * Created by Kay on 15/4/19.
  */
 public class BitmapUtils {
     public static float getBitmapRatio(Context context, int resourceId) {

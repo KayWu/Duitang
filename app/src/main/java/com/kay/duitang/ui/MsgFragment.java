@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import com.kay.duitang.R;
 
 /**
- * Created by mac on 15/4/23.
+ * Created by Kay on 15/4/23.
  */
 public class MsgFragment extends Fragment {
 

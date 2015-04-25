@@ -48,13 +48,12 @@
         <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="120dp"
-            android:background="@color/white"
+            android:background="@drawable/table_view"
             android:scrollbars="none"
             >
             <com.kay.duitang.ui.HorizontalTrendView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/card_background">
+                android:layout_height="match_parent">
 
             </com.kay.duitang.ui.HorizontalTrendView>
         </HorizontalScrollView>

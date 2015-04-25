@@ -5,7 +5,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical"
-              android:background="@drawable/card_background"
+              android:background="@drawable/table_view"
     >
 
     <com.etsy.android.grid.util.DynamicHeightImageView
@@ -35,7 +35,7 @@
         android:textSize="10sp"
         android:textColor="@color/dark_grey"
         android:background="@null"
-        android:text="233"
+        tools:text="233"
         />
 
     <View

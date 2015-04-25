@@ -1,7 +1,7 @@
 package com.kay.duitang.bean;
 
 /**
- * Created by mac on 15/4/19.
+ * Created by Kay on 15/4/19.
  */
 public class StaggerItem {
     private int imageSource;

@@ -10,7 +10,7 @@ import android.graphics.Shader;
 import android.graphics.drawable.Drawable;
 
 /**
- * Created by mac on 15/4/6.
+ * Created by Kay on 15/4/6.
  */
 public class CircleImageDrawble extends Drawable {
     private Bitmap mBitmap;

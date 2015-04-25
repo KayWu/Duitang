@@ -11,7 +11,7 @@ import com.kay.duitang.ui.PopularFragment;
 import com.kay.duitang.ui.MoveFragment;
 
 /**
- * Created by mac on 15/4/11.
+ * Created by Kay on 15/4/11.
  */
 public class FragmentAdapter extends FragmentStatePagerAdapter {
 

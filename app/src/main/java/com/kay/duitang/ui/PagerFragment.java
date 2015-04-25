@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 /**
- * Created by mac on 15/4/11.
+ * Created by Kay on 15/4/11.
  */
 public class PagerFragment extends Fragment {
 

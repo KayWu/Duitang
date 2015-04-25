@@ -7,4 +7,5 @@
     <color name="light_grey">#ffe6e6e6</color>
     <color name="dark_grey">#ffb4b4b4</color>
     <color name="blue">#ff35abde</color>
+    <color name="dark_actionbar">#ff222222</color>
 </resources>

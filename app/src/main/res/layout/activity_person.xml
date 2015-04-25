@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kay.duitang.ui.ScrollNotifyView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/user_background"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:src="@drawable/guitar_background"
+                android:scaleType="centerCrop"
+                />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/user_face"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/user_default_face"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="64dp"
+                app:border_color="@color/white"
+                app:border_width="3dp"
+                />
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/user_face"
+                android:layout_centerHorizontal="true"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:text="用户"
+                />
+
+            <Button
+                android:id="@+id/collect_number"
+                android:layout_width="32dp"
+                android:layout_height="16dp"
+                android:layout_below="@id/user_name"
+                android:layout_centerHorizontal="true"
+                android:drawableLeft="@drawable/ic_star"
+                android:layout_marginTop="4dp"
+                android:textSize="10sp"
+                android:textColor="@color/white"
+                android:background="@null"
+                android:text="0"
+                />
+
+            <TextView
+                android:id="@+id/follow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/collect_number"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:text="关注 0 · 粉丝 0"
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/album_club"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/table_view"
+
+            >
+
+            <LinearLayout
+                android:id="@+id/album"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="8dp"
+                    android:text="专辑 0"
+                    android:textSize="17sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="查看所有"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="16sp"
+                    />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/icon_arrow"
+                    />
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/profile_add_album"
+                android:layout_marginLeft="16dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:text="创建新专辑"
+                />
+
+            <View
+                style="@style/HorizontalDivider"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:text="Club 0"
+                android:textSize="17sp"
+                />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/profile_add_club"
+                android:layout_marginLeft="16dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:text="发现Club"
+                />
+
+        </LinearLayout>
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/table_view">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="16dp"
+                    android:text="所有的图片 0"
+                    android:textSize="15sp"/>
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/icon_arrow"
+                    />
+            </TableRow>
+
+            <View style="@style/HorizontalDivider"/>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="16dp"
+                    android:text="喜欢的专辑 0"
+                    android:textSize="15sp"/>
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/icon_arrow"
+                    />
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+</com.kay.duitang.ui.ScrollNotifyView>

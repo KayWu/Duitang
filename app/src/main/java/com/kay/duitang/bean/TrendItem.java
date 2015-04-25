@@ -1,7 +1,7 @@
 package com.kay.duitang.bean;
 
 /**
- * Created by mac on 15/4/21.
+ * Created by Kay on 15/4/21.
  */
 public class TrendItem {
     private int imageSource;

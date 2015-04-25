@@ -5,12 +5,17 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-
-    <com.etsy.android.grid.StaggeredGridView
-        android:id="@+id/stagger_view"
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:item_margin="8dp"
-        app:column_count="2"
-        />
+        android:layout_height="match_parent">
+
+        <com.etsy.android.grid.StaggeredGridView
+            android:id="@+id/stagger_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:item_margin="8dp"
+            app:column_count="2"
+            />
+    </android.support.v4.widget.SwipeRefreshLayout>
 </LinearLayout>

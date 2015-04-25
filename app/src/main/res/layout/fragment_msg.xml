@@ -8,7 +8,7 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/card_background"
+        android:background="@drawable/table_view"
         android:layout_margin="16dp">
 
 
@@ -70,10 +70,5 @@
                 android:textSize="16sp"
                 android:gravity="center_vertical"/>
         </TableRow>
-
-        <View
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="12dp"
-            style="@style/HorizontalDivider"/>
     </TableLayout>
 </LinearLayout>

@@ -18,7 +18,7 @@ import java.util.List;
 import butterknife.ButterKnife;
 
 /**
- * Created by mac on 15/4/18.
+ * Created by Kay on 15/4/18.
  */
 public class TopItemAdapter extends android.support.v4.view.PagerAdapter {
 

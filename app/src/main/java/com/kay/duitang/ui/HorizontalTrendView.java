@@ -18,7 +18,7 @@ import java.util.List;
 import butterknife.ButterKnife;
 
 /**
- * Created by mac on 15/4/22.
+ * Created by Kay on 15/4/22.
  */
 public class HorizontalTrendView extends LinearLayout {
 

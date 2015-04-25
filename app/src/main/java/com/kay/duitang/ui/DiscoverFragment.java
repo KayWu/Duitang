@@ -12,7 +12,7 @@ import com.kay.duitang.R;
 import butterknife.ButterKnife;
 
 /**
- * Created by mac on 15/4/20.
+ * Created by Kay on 15/4/20.
  */
 public class DiscoverFragment extends Fragment {
 
