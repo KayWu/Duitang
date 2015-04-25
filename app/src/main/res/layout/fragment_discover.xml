@@ -48,7 +48,7 @@
         <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="120dp"
-            android:background="@drawable/table_view"
+            android:background="@drawable/table_view_rectangle"
             android:scrollbars="none"
             >
             <com.kay.duitang.ui.HorizontalTrendView

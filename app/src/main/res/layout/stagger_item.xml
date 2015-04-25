@@ -5,7 +5,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical"
-              android:background="@drawable/table_view"
+              android:background="@drawable/table_view_rectangle"
     >
 
     <com.etsy.android.grid.util.DynamicHeightImageView
@@ -63,8 +63,9 @@
             android:textSize="13sp"
             android:textColor="@color/blue"
             android:maxLines="1"
+            android:lines="1"
             android:ellipsize="end"
-            android:text="用户A"
+            tools:text="用户A"
             />
 
         <TextView
@@ -74,10 +75,12 @@
             android:layout_toRightOf="@id/thumb"
             android:layout_below="@id/user_name"
             android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
             android:textSize="13sp"
             android:maxLines="1"
+            android:lines="1"
             android:ellipsize="end"
-            android:text="收集到 我们一起"
+            tools:text="收集到 我们一起"
             />
 
     </RelativeLayout>

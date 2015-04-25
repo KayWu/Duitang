@@ -5,6 +5,9 @@ import android.app.Activity;
 import android.content.res.Resources;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 import com.kay.duitang.R;
@@ -29,8 +32,17 @@ public class PersonActivity extends Activity implements ScrollNotifyView.OnScrol
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_person);
         ButterKnife.inject(this);
+        Animation alphaShow = AnimationUtils.loadAnimation(this, R.anim.alpha_show);
+        mScrollView.startAnimation(alphaShow);
         setActionBar();
         initView();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_person, menu);
+        return true;
     }
 
     private void initView() {
@@ -65,7 +77,7 @@ public class PersonActivity extends Activity implements ScrollNotifyView.OnScrol
 
     private float calculateAlpha(int scrollY) {
         int minDist = 0;
-        int maxDist = 200;
+        int maxDist = 300;
         if (scrollY > maxDist) return 1;
         else if (scrollY < minDist) return 0;
         else {

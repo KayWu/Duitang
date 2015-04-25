@@ -13,83 +13,24 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/user_background"
-                android:layout_width="match_parent"
-                android:layout_height="350dp"
-                android:src="@drawable/guitar_background"
-                android:scaleType="centerCrop"
-                />
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/user_face"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/user_default_face"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="64dp"
-                app:border_color="@color/white"
-                app:border_width="3dp"
-                />
-
-            <TextView
-                android:id="@+id/user_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_below="@id/user_face"
-                android:layout_centerHorizontal="true"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:textColor="@color/white"
-                android:text="用户"
-                />
-
-            <Button
-                android:id="@+id/collect_number"
-                android:layout_width="32dp"
-                android:layout_height="16dp"
-                android:layout_below="@id/user_name"
-                android:layout_centerHorizontal="true"
-                android:drawableLeft="@drawable/ic_star"
-                android:layout_marginTop="4dp"
-                android:textSize="10sp"
-                android:textColor="@color/white"
-                android:background="@null"
-                android:text="0"
-                />
-
-            <TextView
-                android:id="@+id/follow"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/collect_number"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="4dp"
-                android:textSize="12sp"
-                android:textColor="@color/white"
-                android:text="关注 0 · 粉丝 0"
-                />
-        </RelativeLayout>
+        <include layout="@layout/profile_header"/>
 
         <LinearLayout
             android:id="@+id/album_club"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="@drawable/table_view"
+            android:background="@drawable/table_view_rectangle"
 
             >
 
             <LinearLayout
-                android:id="@+id/album"
+                android:id="@+id/album_head"
                 android:layout_width="fill_parent"
                 android:layout_height="48dp"
                 android:orientation="horizontal"
+                android:clickable="true"
+                android:background="@drawable/selector_default_press"
                 >
 
                 <TextView
@@ -123,7 +64,8 @@
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/profile_add_album"
+                android:src="@drawable/selector_add_album"
+                android:clickable="true"
                 android:layout_marginLeft="16dp"
                 />
 
@@ -151,7 +93,8 @@
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/profile_add_club"
+                android:src="@drawable/selector_add_club"
+                android:clickable="true"
                 android:layout_marginLeft="16dp"
                 />
 
@@ -172,9 +115,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
-            android:background="@drawable/table_view">
+            android:background="@drawable/table_view_rectangle">
 
-            <TableRow>
+            <TableRow
+                style="@style/DefaultClickable">
 
                 <TextView
                     android:layout_width="0dp"
@@ -195,7 +139,8 @@
 
             <View style="@style/HorizontalDivider"/>
 
-            <TableRow>
+            <TableRow
+                style="@style/DefaultClickable">
 
                 <TextView
                     android:layout_width="0dp"

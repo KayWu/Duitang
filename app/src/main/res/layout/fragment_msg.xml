@@ -8,11 +8,12 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/table_view"
-        android:layout_margin="16dp">
+        android:layout_margin="16dp"
+        android:background="@drawable/table_view_rectangle">
 
 
-        <TableRow>
+        <TableRow
+            style="@style/DefaultClickable">
 
             <ImageView
                 android:layout_width="24dp"
@@ -34,7 +35,8 @@
             android:layout_marginRight="12dp"
             style="@style/HorizontalDivider"/>
 
-        <TableRow>
+        <TableRow
+            style="@style/DefaultClickable">
 
             <ImageView
                 android:layout_width="24dp"
@@ -55,7 +57,8 @@
             android:layout_marginRight="12dp"
             style="@style/HorizontalDivider"/>
 
-        <TableRow>
+        <TableRow
+            style="@style/DefaultClickable">
 
             <ImageView
                 android:layout_width="24dp"
