@@ -1,7 +1,7 @@
 # 仿堆糖App UI
 该App为模仿堆糖App，仅包含首页四个界面以及用户页的UI。仅个人学习之用，若侵则删。
 
-[APK下载](https://github.com/KayWu/Duitang/blob/master/duitang.apk)
+[APK下载](https://raw.githubusercontent.com/KayWu/Duitang/master/duitang.apk)
 
 ## 页面效果
 ![](https://raw.github.com/KayWu/Duitang/master/screenshot/screen_0.gif)
