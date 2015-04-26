@@ -15,7 +15,6 @@ import com.etsy.android.grid.StaggeredGridView;
 import com.kay.duitang.R;
 import com.kay.duitang.adapter.StaggerItemAdapter;
 import com.kay.duitang.adapter.TopItemAdapter;
-import com.viewpagerindicator.CirclePageIndicator;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -28,7 +27,8 @@ public class PopularFragment extends Fragment implements SwipeRefreshLayout.OnRe
 
     ViewPager imagePager;
 
-    CirclePageIndicator imageIndicator;
+
+    ClumsyIndicator mClumsyIndicator;
 
     @InjectView(R.id.stagger_view)
     StaggeredGridView mStaggeredGridView;
@@ -45,7 +45,7 @@ public class PopularFragment extends Fragment implements SwipeRefreshLayout.OnRe
         ButterKnife.inject(this, view);
         View topView = inflater.inflate(R.layout.top_view, (ViewGroup) view, false);
         imagePager = ButterKnife.findById(topView, R.id.image_pager);
-        imageIndicator = ButterKnife.findById(topView, R.id.image_indicator);
+        mClumsyIndicator = ButterKnife.findById(topView, R.id.indicator);
         mStaggeredGridView.addHeaderView(topView);
         initView();
         handler = new Handler();
@@ -55,10 +55,36 @@ public class PopularFragment extends Fragment implements SwipeRefreshLayout.OnRe
     private void initView() {
         TopItemAdapter adapter = new TopItemAdapter(getActivity());
         imagePager.setAdapter(adapter);
-        imageIndicator.setViewPager(imagePager);
+        mClumsyIndicator.setViewPager(imagePager);
         mStaggeredGridView.setAdapter(new StaggerItemAdapter(getActivity()));
         mSwipeRefreshLayout.setOnRefreshListener(this);
         mSwipeRefreshLayout.setColorSchemeResources(R.color.blue);
+        imagePager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            boolean isHandled = false;
+
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                if (!isHandled) {
+                    mSwipeRefreshLayout.setEnabled(false);
+                    isHandled = true;
+                }
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                mClumsyIndicator.setSelectedItem(position);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+                switch (state) {
+                    case ViewPager.SCROLL_STATE_IDLE:
+                        mSwipeRefreshLayout.setEnabled(true);
+                        isHandled = false;
+                        break;
+                }
+            }
+        });
     }
 
     @Override
@@ -71,4 +97,5 @@ public class PopularFragment extends Fragment implements SwipeRefreshLayout.OnRe
             }
         }, 3000);
     }
+
 }
