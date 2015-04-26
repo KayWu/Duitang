@@ -2,6 +2,12 @@
 该App为模仿堆糖App，仅包含首页四个界面以及用户页的UI。
 仅个人学习之用，若侵则删。
 
+## 页面效果
+![](https://raw.github.com/KayWu/Duitang/master/screenshot/screen_0.gif)
+![](https://raw.github.com/KayWu/Duitang/master/screenshot/screen_1.gif)
+![](https://raw.github.com/KayWu/Duitang/master/screenshot/screen_2.gif)
+![](https://raw.github.com/KayWu/Duitang/master/screenshot/screen_3.gif)
+
 ## 开源库
 * StaggeredGridView
 * SwipeRefreshLayout
