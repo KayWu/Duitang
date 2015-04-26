@@ -45,7 +45,7 @@
         android:layout_height="16dp"
         android:layout_below="@id/user_name"
         android:layout_centerHorizontal="true"
-        android:drawableLeft="@drawable/ic_star"
+        android:drawableLeft="@drawable/ic_star_white"
         android:layout_marginTop="4dp"
         android:textSize="10sp"
         android:textColor="@color/white"

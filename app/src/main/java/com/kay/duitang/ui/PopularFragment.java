@@ -64,7 +64,7 @@ public class PopularFragment extends Fragment implements SwipeRefreshLayout.OnRe
 
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                if (!isHandled) {
+                if (!isHandled && positionOffsetPixels > 0) {
                     mSwipeRefreshLayout.setEnabled(false);
                     isHandled = true;
                 }
