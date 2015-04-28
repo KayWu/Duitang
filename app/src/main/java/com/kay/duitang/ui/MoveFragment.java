@@ -28,7 +28,7 @@ public class MoveFragment extends Fragment implements SwipeRefreshLayout.OnRefre
     @InjectView(R.id.refresh_layout)
     SwipeRefreshLayout mSwipeRefreshLayout;
 
-    static Handler handler;
+    private static Handler handler;
 
     @Nullable
     @Override
@@ -56,5 +56,11 @@ public class MoveFragment extends Fragment implements SwipeRefreshLayout.OnRefre
                 Toast.makeText(getActivity(), getString(R.string.refresh_success), Toast.LENGTH_SHORT).show();
             }
         }, 3000);
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        handler.removeCallbacksAndMessages(null);
     }
 }

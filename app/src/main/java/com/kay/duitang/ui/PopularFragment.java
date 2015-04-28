@@ -36,7 +36,7 @@ public class PopularFragment extends Fragment implements SwipeRefreshLayout.OnRe
     @InjectView(R.id.refresh_layout)
     SwipeRefreshLayout mSwipeRefreshLayout;
 
-    static Handler handler;
+    private static Handler handler;
 
     @Nullable
     @Override
@@ -98,4 +98,9 @@ public class PopularFragment extends Fragment implements SwipeRefreshLayout.OnRe
         }, 3000);
     }
 
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        handler.removeCallbacksAndMessages(null);
+    }
 }
