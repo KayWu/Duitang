@@ -38,6 +38,7 @@ public class WelcomeActivity extends Activity {
         Picasso.with(this).load(R.drawable.welcome_img).into(welcomeImg);
         final Typeface font = Typeface.createFromAsset(getAssets(), "splash.ttf");
         countDown.setTypeface(font);
+        // 倒数计时
         CountDownTimer timer = new CountDownTimer(3200, 1000) {
             int num = 2;
 

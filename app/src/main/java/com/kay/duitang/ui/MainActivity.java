@@ -9,10 +9,13 @@ import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.ViewConfiguration;
 
 import com.astuetz.PagerSlidingTabStrip;
 import com.kay.duitang.R;
 import com.kay.duitang.adapter.FragmentAdapter;
+
+import java.lang.reflect.Field;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -68,5 +71,18 @@ public class MainActivity extends Activity {
         mActionbar.setIcon(new CircleImageDrawble(mBitmap));
         mActionbar.setTitle("用户");
         mActionbar.setHomeButtonEnabled(true);
+        setOverflowShowingAlways();
+    }
+
+    // 设置显示Overflow按钮，即使有物理Menu按钮
+    private void setOverflowShowingAlways() {
+        try {
+            ViewConfiguration config = ViewConfiguration.get(this);
+            Field menuKeyField = ViewConfiguration.class.getDeclaredField("sHasPermanentMenuKey");
+            menuKeyField.setAccessible(true);
+            menuKeyField.setBoolean(config, false);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

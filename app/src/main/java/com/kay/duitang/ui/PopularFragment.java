@@ -59,6 +59,9 @@ public class PopularFragment extends Fragment implements SwipeRefreshLayout.OnRe
         mStaggeredGridView.setAdapter(new StaggerItemAdapter(getActivity()));
         mSwipeRefreshLayout.setOnRefreshListener(this);
         mSwipeRefreshLayout.setColorSchemeResources(R.color.blue);
+
+        // 解决SwipeRefreshLayout和ViewPager的手势冲突
+        // 在ViewPager滑动时使SwipeRefreshLayout失效 停止滑动时使其正常
         imagePager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             boolean isHandled = false;
 
@@ -88,6 +91,15 @@ public class PopularFragment extends Fragment implements SwipeRefreshLayout.OnRe
     }
 
     @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        if (savedInstanceState != null) {
+            int currentItem = savedInstanceState.getInt("pager_current_item");
+            imagePager.setCurrentItem(currentItem, false);
+        }
+    }
+
+    @Override
     public void onRefresh() {
         handler.postDelayed(new Runnable() {
             @Override
@@ -102,5 +114,13 @@ public class PopularFragment extends Fragment implements SwipeRefreshLayout.OnRe
     public void onDestroyView() {
         super.onDestroyView();
         handler.removeCallbacksAndMessages(null);
+    }
+
+    // 保存imagePager状态
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt("pager_current_item", imagePager.getCurrentItem());
+
     }
 }

@@ -5,6 +5,7 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
+import android.util.DisplayMetrics;
 import android.view.View;
 
 import com.kay.duitang.R;
@@ -21,13 +22,13 @@ public class ClumsyIndicator extends View {
     private int selectedItem = 0;
 
     // 圆形半径
-    private int mRadius = 4;
+    private float mRadius;
 
     // 选中圆形半径
-    private int mSelectedRadius = 6;
+    private float mSelectedRadius;
 
     // 圆形之间的间隔
-    private int mSpace = 25;
+    private float mSpace;
 
     // 画笔
     private Paint mPaint;
@@ -43,6 +44,17 @@ public class ClumsyIndicator extends View {
     public ClumsyIndicator(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         initPaint();
+        setSize();
+    }
+
+    // 根据density设置大小
+    private void setSize() {
+        DisplayMetrics metrics = getResources().getDisplayMetrics();
+        mRadius = 2 * metrics.density;
+        mSelectedRadius = 3 * metrics.density;
+        mSpace = 12 * metrics.density;
+
+
     }
 
     private void initPaint() {
@@ -72,7 +84,7 @@ public class ClumsyIndicator extends View {
         int specSize = MeasureSpec.getSize(widthMeasureSpec);
         int result;
         if (specMode != MeasureSpec.EXACTLY) {
-            result = getPaddingLeft() + getPaddingRight() + mSpace * mCount;
+            result = getPaddingLeft() + getPaddingRight() + (int)(mSpace * mCount);
             if (specMode == MeasureSpec.AT_MOST) {
                 result = Math.min(specSize, result);
             }
@@ -87,7 +99,7 @@ public class ClumsyIndicator extends View {
         int specSize = MeasureSpec.getSize(heightMeasureSpec);
         int result;
         if (specMode != MeasureSpec.EXACTLY) {
-            result = getPaddingTop() + getPaddingBottom() + mSelectedRadius * 2;
+            result = getPaddingTop() + getPaddingBottom() + (int)(mSelectedRadius * 2);
             if (specMode == MeasureSpec.AT_MOST) {
                 result = Math.min(specSize, result);
             }
